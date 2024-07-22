@@ -67,8 +67,7 @@ addImageToPDF(pdfPath, imagePath, outputPath)
   });
 
 
-
-mongoose.connect('mongodb://127.0.0.1:27017/verifiedUser', { useNewUrlParser: true, useUnifiedTopology: true })
+  mongoose.connect('mongodb+srv://mahadevgujju8:SFPaCla5lEsr9HBS@cluster0.gqnbgtq.mongodb.net/second?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Could not connect to MongoDB', err));
 
@@ -386,7 +385,7 @@ app.post('/addPermission',async (req,res)=>{
   }
 })
 
-app.post('/addTodo', verifyToken, async (req, res) => {
+app.post('/addTodo', async (req, res) => {
   try {
     const { title, description } = req.body;
     const todo = new Todos({ title, description });
