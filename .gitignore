@@ -1,0 +1,48 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore build artifacts
+/dist/
+/build/
+/out/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore environment variable files
+.env
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore Python bytecode
+*.pyc
+__pycache__/
+
+# Ignore coverage reports
+coverage/
+
+# Ignore compiled code
+*.class
+*.o
+*.so
+
+# Ignore backup files
+*.bak
+*.swp
+*~
+
+# Ignore personal configuration files
+*.local
+*.env.local
