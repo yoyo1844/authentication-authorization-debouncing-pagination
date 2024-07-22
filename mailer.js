@@ -9,7 +9,7 @@ const path=require('path')
 const fs =require('fs')
 const { PDFDocument, rgb } = require('pdf-lib');
 
-console.log("hello wodr")
+console.log("hello world")
 
 app.use(bodyParser.json());
 app.use(cors());
