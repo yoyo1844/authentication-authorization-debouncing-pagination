@@ -385,7 +385,7 @@ app.post('/addPermission',async (req,res)=>{
   }
 })
 
-app.post('/addTodo', async (req, res) => {
+app.post('/addTodo', verifyToken,async (req, res) => {
   try {
     const { title, description } = req.body;
     const todo = new Todos({ title, description });
