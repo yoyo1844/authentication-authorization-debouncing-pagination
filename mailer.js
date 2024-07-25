@@ -385,7 +385,7 @@ app.post('/addPermission',async (req,res)=>{
   }
 })
 
-app.post('/addTodo', verifyToken,async (req, res) => {
+app.post('/addTodo',async (req, res) => {
   try {
     const { title, description } = req.body;
     const todo = new Todos({ title, description });
@@ -405,7 +405,7 @@ app.get('/getTodos', async (req, res) => {
   }
 });
 
-app.post('/deleteTodo',verifyToken,async (req,res)=>{
+app.post('/deleteTodo',async (req,res)=>{
 try{
   const todoID = req.body.todoID
 await Todos.findOneAndDelete({_id : todoID})
@@ -415,7 +415,7 @@ res.send("deleted")
     console.log(err)
 }
 })
-app.post('/editTodo',verifyToken,async (req,res)=>{
+app.post('/editTodo',async (req,res)=>{
   try{
     const todoId=req.body.todoID
     const editedTitle=req.body.editedTitle
